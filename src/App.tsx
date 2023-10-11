@@ -2,6 +2,7 @@ import gsap from "gsap";
 import { useRef, useLayoutEffect, RefObject } from "react";
 import Iframe3D from "./Iframes3D/Iframe3D";
 
+
 function App() {
   const root: RefObject<HTMLDivElement> = useRef(null);
 
@@ -22,7 +23,7 @@ function App() {
       }}
     >
       <div>
-        <Iframe3D/>
+        <Iframe3D />
       </div>
       <h1
         ref={root}
@@ -45,6 +46,7 @@ function App() {
       >
         Julio Nunes - <span>click Aqui!</span>
       </a>
+      
     </div>
   );
 }
