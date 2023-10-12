@@ -37,6 +37,7 @@ height: 100vh;
     //Cores
 
     --color-night: #181717;
+    --color-black: #000;
     --color-midnight: #F3F3F3;
 
 

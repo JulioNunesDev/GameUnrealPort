@@ -1,6 +1,8 @@
 import gsap from "gsap";
 import { useRef, useLayoutEffect, RefObject } from "react";
 import Iframe3D from "./Iframes3D/Iframe3D";
+import Julio from './assets/Videos/Julio.mp4'
+import DemonRed from "./components/AskDemons/DemonRed";
 
 
 function App() {
@@ -14,40 +16,35 @@ function App() {
   }, []);
 
   return (
-    <div
-      style={{
-        overflow: "hidden",
-        backgroundColor: "var(--color-night)",
-        width: "100%",
-        height: "100vh",
-      }}
-    >
-      <div>
-        <Iframe3D />
-      </div>
-      <h1
-        ref={root}
-        style={{
-          color: "var(--color-midnight)",
-          fontSize: "var(--size-titleup)",
-          fontFamily: "var(--font-Oxa)",
-        }}
-      >
-        Site em Desenvolvimento! Libs: Presentes [ Green Sock, Three Js ]
-      </h1>
-      <a
-        style={{
-          color: "var(--color-midnight)",
-          fontSize: "var(--size-title)",
-          fontFamily: "var(--font-Oxa)",
-        }}
-        href="https://www.instagram.com/julionunesyt/"
-        target="_blank"
-      >
-        Julio Nunes - <span>click Aqui!</span>
-      </a>
+    // <div
+    //   style={{
+    //     overflow: "hidden",
+    //     backgroundColor: "var(--color-night)",
+    //     width: "100%",
+    //     height: "100vh",
+    //     display: 'flex',
+    //     flexDirection: 'column-reverse',
+    //     justifyContent: 'center',
+    //     alignItems: 'center'
+    //   }}
+    // >
+    //   <div  style={{
+    //     overflow: "hidden",
+    //     backgroundColor: "var(--color-night)",
+    //     width: "100%",
+    //     height: "100vh",
+        
+        
+    //   }} >
+    //     <Iframe3D />
+    //   </div>
       
-    </div>
+    //   <video width={500} height={500} src={Julio} autoPlay controls>
+    //     <source   type="video/mp4"/>
+    //     seu navegador nao suporta esse video
+    //     </video>
+    // </div>
+    <DemonRed/>
   );
 }
 

@@ -23,7 +23,7 @@ export default function Iframe3D() {
       
         web-share
         width='100%'
-        height='500px'
+        height='600px'
         src="https://sketchfab.com/models/24aae01ca3a64a8c9dfc232840c2542b/embed"
       ></iframe>
     </div>
