@@ -3,7 +3,6 @@ import Home from "../page/home";
 import Sobre from "../page/sobre";
 import GameDemon from "../layout/logic/GameDemon";
 
-
 export default function AppRoutes() {
   return (
     <BrowserRouter>

@@ -5,8 +5,6 @@ import DemonReds from "../../assets/Arts/demonred.svg";
 import DemonDialogOne from "../../assets/Arts/demoreddialogone.svg";
 import usePlayerDemonHook from "../../hooks/usePlayerDemonContext";
 
-
-
 type TDemon = {
   src: string;
   alt: string;
@@ -21,8 +19,8 @@ const Props2: TDemon = {
 };
 
 function DemonRed() {
-  const {stopMusic} = usePlayerDemonHook()
- 
+  const { stopMusic } = usePlayerDemonHook();
+
   return (
     <S.boxContainer>
       <S.content>

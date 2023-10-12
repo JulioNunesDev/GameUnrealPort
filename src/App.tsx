@@ -3,6 +3,7 @@ import { useRef, useLayoutEffect, RefObject } from "react";
 import Iframe3D from "./Iframes3D/Iframe3D";
 import Julio from "./assets/Videos/Julio.mp4";
 
+
 function App() {
   const root: RefObject<HTMLDivElement> = useRef(null);
 
@@ -42,6 +43,8 @@ function App() {
         seu navegador nao suporta esse video
       </video>
     </div>
+
+  
   );
 }
 
