@@ -23,7 +23,7 @@ function App() {
         height: "100vh",
         display: "flex",
         flexDirection: "column-reverse",
-        justifyContent: "center",
+        
         alignItems: "center",
       }}
     >
@@ -31,14 +31,14 @@ function App() {
         style={{
           overflow: "hidden",
           backgroundColor: "var(--color-night)",
-          width: "100%",
-          height: "100vh",
+          width: "auto",
+          height: "100%",
         }}
       >
         <Iframe3D />
       </div>
 
-      <video width={500} height={500} src={Julio} autoPlay controls>
+      <video width={400} height={400} src={Julio} autoPlay controls>
         <source type="video/mp4" />
         seu navegador nao suporta esse video
       </video>
