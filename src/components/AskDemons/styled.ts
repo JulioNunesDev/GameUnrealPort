@@ -14,17 +14,27 @@ const fadeIn = keyframes`
 const styleds = {
   boxContainer: styled.main`
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: var(--color-black);
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 530px){
+      height: 100dvh;
+    }
   `,
   content: styled.section`
     width: 60%;
     height: 500px;
     background-color: rgba(0, 0, 0, 0.5);
     position: relative;
+    ;
+
+    @media screen and (max-width: 530px){
+      height: 50%;
+      
+    }
 
     .playerComponent{
       width: 10%;
@@ -60,18 +70,34 @@ const styleds = {
     .demonred {
       position: absolute;
       display: flex;
-      width: 100%;
+      width: 120%;
       height: 100%;
       filter: drop-shadow(2px 12px 7px rgba(255, 0, 0, 0.2));
       animation: ${fadeIn} 3s ease-in-out;
+
+      @media screen and (max-width: 1000px) {
+        
+        width: 120%;
+        height: 120%;
+      }
+
+      @media screen and (max-width: 530px){
+        top: 90px;
+        width:100%;
+      height: 400px;
+    }
      
+    @media screen and (max-width: 300px){
+      width:120%;
+      height: 400px;
+    }
     }
     .dialog {
       position: absolute;
       top: 20px;
       right: 100px;
-      width: 30%;
-      height: 30%;
+      width: 35%;
+      height: 35%;
       filter: drop-shadow(2px 12px 7px rgba(255, 0, 0, 0.2));
       animation: ${fadeIn} 7s ease-in-out;
 
@@ -83,7 +109,14 @@ const styleds = {
 
       @media screen and (max-width: 530px){
         top: 50px;
-        dth: 50%;
+        width: 70%;
+      height: 50%;
+    }
+
+    @media screen and (max-width: 425px){
+      top: 90px;
+      right: 30px;
+        width: 70%;
       height: 50%;
     }
     }
