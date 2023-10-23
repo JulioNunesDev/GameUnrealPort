@@ -1,8 +1,9 @@
 import gsap from "gsap";
 import { useRef, useLayoutEffect, RefObject } from "react";
-import Iframe3D from "./Iframes3D/Iframe3D";
-import Julio from "./assets/Videos/Julio.mp4";
-
+import DemonRed from "./components/AskDemons/DemonRed";
+import useDemonHook from "./hooks/useDemonContext";
+import AppRoutes from "./routes/AppRoutes";
+import { AppPlayerGameDemon } from "./context/usePlayMusic";
 
 function App() {
   const root: RefObject<HTMLDivElement> = useRef(null);
@@ -13,39 +14,21 @@ function App() {
     ctx.to(root.current, { rotation: "360", ease: "all Linear .2s" });
     ctx.from(root.current, { padding: 40 });
   }, []);
-
-  return (
-    <div
-      style={{
-        overflow: "hidden",
-        backgroundColor: "var(--color-night)",
-        width: "100%",
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column-reverse",
-        
-        alignItems: "center",
-      }}
-    >
-      <div
-        style={{
-          overflow: "hidden",
-          backgroundColor: "var(--color-night)",
-          width: "auto",
-          height: "100%",
-        }}
-      >
-        <Iframe3D />
-      </div>
-
-      <video width={400} height={400} src={Julio} autoPlay controls>
-        <source type="video/mp4" />
-        seu navegador nao suporta esse video
-      </video>
-    </div>
-
   
-  );
+  const {answer} = useDemonHook()
+  if(answer == 'true'){
+    return (
+      <AppRoutes/>
+      )
+  }else{
+    return (
+      <AppPlayerGameDemon>
+        
+      <DemonRed/>
+      </AppPlayerGameDemon>
+      )
+      
+  }
 }
 
 export default App;

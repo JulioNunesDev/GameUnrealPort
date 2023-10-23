@@ -4,6 +4,7 @@ import S from "./styled";
 import DemonReds from "../../assets/Arts/demonred.svg";
 import DemonDialogOne from "../../assets/Arts/demoreddialogone.svg";
 import usePlayerDemonHook from "../../hooks/usePlayerDemonContext";
+import ButtonAnswer from "../ButtonAnswer";
 
 type TDemon = {
   src: string;
@@ -23,6 +24,7 @@ function DemonRed() {
 
   return (
     <S.boxContainer>
+      <ButtonAnswer/>
       <S.content>
         <div className="playerComponent">
           <button onClick={stopMusic}>
@@ -33,6 +35,7 @@ function DemonRed() {
         <img className="demonred" {...Props1} />
         <img className="dialog" {...Props2} />
       </S.content>
+      
     </S.boxContainer>
   );
 }
