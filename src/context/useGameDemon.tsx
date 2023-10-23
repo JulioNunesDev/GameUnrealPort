@@ -42,7 +42,8 @@ export const AppProviderGameDemon = ({children}: Tchildren)=>{
 const initializeContext: TGameContext= {
     answer,
     setAnswerName,
-    verificationAnswer
+    verificationAnswer,
+    
     }
 
     return (
